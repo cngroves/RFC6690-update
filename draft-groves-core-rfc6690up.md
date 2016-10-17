@@ -2,7 +2,7 @@
 title: "Addition of organisation prefix to RFC6690 IANA CoRE parameters registration"
 abbrev: Prefix for CoRE parameter reg
 docname: draft-groves-core-rfc6690up-latest
-date: 2016-09-26
+date: 2016-10-17
 category: std
 
 ipr: trust200902
@@ -14,11 +14,22 @@ stand_alone: yes
 pi: [toc, sortrefs, symrefs]
 
 author:
-      -
-        ins: C. Groves
-        name: Christian Groves
-        org: Huawei
-        email: Christian.Groves@nteczone.com
+- ins: C. Groves
+  name: Christian Groves
+  organization: Huawei
+  street: '' 
+  city: ''
+  code: ''
+  country: Australia
+  email: Christian.Groves@nteczone.com
+- ins: W. Yang
+  name: Weiwei Yang
+  organization: Huawei
+  street: '' 
+  city: ''
+  code: ''
+  country: P.R.China
+  email: tommy@huawei.com
 
 normative:
   RFC2119:
@@ -92,7 +103,9 @@ E.g. "foo.sensor", "foo.actuator" could be allocated without requiring registrat
 
 Security Considerations
 =======================
-This specification updates the {{RFC6690}} IANA Considerations. No additional security impacts to what is already described in {{RFC6690}} are foreseen.
+This specification updates the {{RFC6690}} IANA Considerations. No additional protocol security impacts to what is already described in {{RFC6690}} are foreseen.
+
+The use of organisational prefixes introducing the possibility that people request prefixes for an organisation that they do not represent. The IANA considerations in this specification require that the designated expert determine if the person requesting a prefix represents the organisation related to the prefix.
 
 IANA Considerations
 ===================
@@ -116,7 +129,7 @@ The specification MUST:
    
    - Specify the procedures for registering values within the prefixed namespace. It ideally SHOULD provide a link where current and future registered values may be found.
 
-   - Indicate that registered values within the prefixed namespace MUST conform to the ABNF reg-rel-type definition of Section 2/{{RFC6690}}. Meaning that the prefix MUST be followed by a sequence of lowercase alphabetic, numeric, ".", or "-" characters, and contains no white space. Note: It is not recommended to immediately follow the prefix with an additional period ".", e.g. "foo..".
+   - Indicate that registered values within the prefixed namespace MUST conform to the ABNF reg-rel-type definition of Section 2/{{RFC6690}}. This means that the prefix MUST be followed by a sequence of lowercase alphabetic, numeric, ".", or "-" characters, and contains no white space. Note: It is not recommended to immediately follow the prefix with an additional period ".", e.g. "foo..".
    
    - Use the recommendation that the period "." character be used for dividing name segments and that the dash "-" character be used for making a segment more readable.  Example Interface Description values might be "core.batch" and "core.link-batch".
 
@@ -130,7 +143,7 @@ The registration template for both sub-registries is:
 
    o  Reference:
 
-   o  Notes: "[optional]"
+   o  Notes: \[optional\]
    
 Registration requests should be sent to the core-parameters@ietf.org mailing list, marked clearly in the subject line (e.g., "NEW RESOURCE TYPE PREFIX - example" to register an "example" relation type or "NEW INTERFACE DESCRIPTION PREFIX - example" to register an "example" Interface Description).
 
