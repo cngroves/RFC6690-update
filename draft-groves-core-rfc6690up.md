@@ -2,7 +2,7 @@
 title: "Addition of organisation prefix to RFC6690 IANA CoRE parameters registration"
 abbrev: Prefix for CoRE parameter reg
 docname: draft-groves-core-rfc6690up-latest
-date: 2016-10-17
+date: 2017-04-19
 category: std
 
 ipr: trust200902
@@ -16,12 +16,12 @@ pi: [toc, sortrefs, symrefs]
 author:
 - ins: C. Groves
   name: Christian Groves
-  organization: Huawei
+  organization: 
   street: '' 
   city: ''
   code: ''
   country: Australia
-  email: Christian.Groves@nteczone.com
+  email: cngroves.std@gmail.com
 - ins: W. Yang
   name: Weiwei Yang
   organization: Huawei
@@ -89,6 +89,25 @@ The above three organisations also have their own registry and procedures for ad
 
 A significant amount of work could be saved by allowing organisations to register a prefix under which they can administer their own resources negating the need for the IANA and the designated IANA expert to be involved for each resource registration.
 
+There were discussions ath the IETF#97 meeting in Seoul about how to tackle this issue. There were broadly two camps in the discussion:
+
+1 - Prefixes are a bad idea as they discourage people from resource re-use and create little "kingdoms". 
+
+2 - Prefixes are OK. They've been used before and people will coalesce on a common set eventually.
+
+Clearly some sort of middle ground is needed to move forward. 
+
+Clearly resource re-use is a valid goal. It order for this to occur organisations/people requesting a new resource type would need to consider the existing resource types and see if it is applicable to them. Presumably if they can't use an existing type then they must have a reason why? One approach could be to introduce a new step into the registration process where the requester must specify any similar resources and why they cannot be used. This does of course add extra burden on the requester to document it and extra burden on the expert to evaluate it. Then there is the issue of what suffices for the analysis and what are the criteria for the expert to accept it? This may not result in reduced registrations but instead create more workload for registrations.
+
+Currently all the rt registrations have been from standards organisations not individuals. The process for registration needs to be simple enough that people/companies have a incentive to register than rather than simply use and squat on a name without registering it.
+
+
+
+It does have to be noted that today there is nothing stopping people/organisations from duplicating resources in their registration. An organisational prefix would not make this worse. 
+
+**Editor's note: Interface descriptions should be considered**
+ 
+
 This specification updates the {{RFC6690}} IANA registration procedures to allow the possibility to register a pre-fix.
 
 Organisation Prefix
@@ -152,6 +171,13 @@ Handling and the decision process is as per section 7.4/{{RFC6690}}.
 Acknowledgements
 ================
 TBD
+
+Changelog
+=========
+
+draft-groves-core-rfc6690up-01:
+
+* Keepalive update. No changes.
 
 
 
